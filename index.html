@@ -1,1 +1,302 @@
-<p> holding page for Mobberleylabs.com</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobberly Labs - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container {
+            margin-bottom: 40px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo svg {
+            width: 100px;
+            height: 100px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .accent {
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .message {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            font-size: 1.1rem;
+        }
+
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .social-links {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 1.3rem;
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+            border-color: white;
+        }
+
+        .floating-shapes {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            mix-blend-mode: multiply;
+        }
+
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: white;
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+            animation: float-slow 20s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 50%;
+            bottom: -50px;
+            left: -50px;
+            animation: float-slow 15s ease-in-out infinite reverse;
+        }
+
+        @keyframes float-slow {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(30px, 30px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .message {
+                padding: 20px;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .logo svg {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .cta {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            .social-links {
+                gap: 15px;
+            }
+
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Lab flask design -->
+                    <defs>
+                        <linearGradient id="flaskGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Flask body -->
+                    <path d="M 35 25 L 35 55 Q 35 70 50 75 Q 65 70 65 55 L 65 25" stroke="url(#flaskGradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Flask neck -->
+                    <line x1="42" y1="25" x2="42" y2="15" stroke="url(#flaskGradient)" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="58" y1="25" x2="58" y2="15" stroke="url(#flaskGradient)" stroke-width="3" stroke-linecap="round"/>
+                    <!-- Flask cap -->
+                    <rect x="40" y="10" width="20" height="6" rx="2" fill="url(#flaskGradient)"/>
+                    <!-- Bubbles inside -->
+                    <circle cx="45" cy="45" r="4" fill="#667eea" opacity="0.6"/>
+                    <circle cx="55" cy="55" r="3" fill="#764ba2" opacity="0.6"/>
+                    <circle cx="50" cy="65" r="2.5" fill="#667eea" opacity="0.6"/>
+                    <!-- Sparkles -->
+                    <circle cx="70" cy="35" r="2" fill="#ffd700"/>
+                    <circle cx="75" cy="50" r="1.5" fill="#ffd700"/>
+                    <circle cx="28" cy="40" r="1.5" fill="#ffd700"/>
+                </svg>
+            </div>
+        </div>
+
+        <h1>Mobberly <span class="accent">Labs</span></h1>
+
+        <p class="subtitle">Something <span class="accent">exciting</span> is brewing here.</p>
+
+        <div class="message">
+            <p>We're working on something truly special and can't wait to share it with you. Check back soon for updates on what's coming next!</p>
+        </div>
+
+        <a href="mailto:hello@mobberleylabs.com" class="cta">Get in Touch</a>
+
+        <div class="social-links">
+            <a href="#" class="social-icon" title="Twitter" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon" title="GitHub" aria-label="GitHub">⚙</a>
+        </div>
+    </div>
+</body>
+</html>
